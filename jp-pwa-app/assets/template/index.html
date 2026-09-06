@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{APP_TITLE_JA}} - {{APP_TITLE_EN}}</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="{{ACCENT_COLOR}}">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <button id="btn-settings" type="button" class="icon-btn settings-btn" aria-haspopup="dialog" aria-label="設定 Settings">
+    <span class="hamburger-icon"><span></span><span></span><span></span></span>
+  </button>
+  <h1><button id="btn-home-title" type="button" class="app-title-btn">{{APP_TITLE_JA}}</button></h1>
+</header>
+
+<div id="settings-overlay" class="settings-overlay hidden">
+  <div id="settings-panel" class="settings-panel" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+    <div class="settings-header">
+      <h2 id="settings-title">設定<span>Settings</span></h2>
+      <button id="btn-settings-close" type="button" class="icon-btn" aria-label="閉じる Close">&times;</button>
+    </div>
+
+    <!-- Add one .settings-row per option here, following an existing app's
+         markup for booleans (.switch) and grouped choices (.settings-row-column
+         + .settings-segmented). -->
+
+    <div class="settings-row settings-row-column">
+      <span class="settings-row-label">アプリとしてインストール<span>Install on PC &amp; smartphone</span></span>
+      <button id="btn-install" type="button" class="settings-install-btn hidden">インストール<span>Install</span></button>
+      <p id="install-hint" class="settings-install-hint hidden"></p>
+    </div>
+
+    <div class="settings-row settings-row-column">
+      <p class="about-app">{{APP_TITLE_JA}}<span id="about-version" class="about-version"></span></p>
+      <a class="about-link" href="CHANGELOG.md" target="_blank" rel="noopener">更新履歴<span>Changelog</span></a>
+    </div>
+  </div>
+</div>
+
+<div id="app">
+  <!-- App-specific screens go here -->
+</div>
+
+<script src="js/settings.js"></script>
+<script src="js/app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "{{APP_TITLE_JA}} - {{APP_TITLE_EN}}",
+  "short_name": "{{APP_TITLE_JA}}",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "{{ACCENT_COLOR}}",
+  "theme_color": "{{ACCENT_COLOR}}",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
