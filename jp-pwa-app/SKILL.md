@@ -43,7 +43,7 @@ does the placeholder substitution deterministically and reports if
 anything was missed:
 
 ```bash
-python3 /home/bagus/.claude/skills/jp-pwa-app/scripts/scaffold.py \
+python3 ${CLAUDE_SKILL_DIR}/scripts/scaffold.py \
   --target /home/bagus/github/<app-name> \
   --app-name <app-name> \
   --title-ja "<APP_TITLE_JA>" --title-en "<App Title En>" \

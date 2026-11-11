@@ -1,8 +1,9 @@
 ---
 name: review-response
 description: Systematic review response workflow from comment analysis to professional rebuttal writing. Use when the user asks to "write rebuttal", "respond to reviewers", "draft review response", or "analyze review comments". Improves paper acceptance rates.
-tags: [Research, Academic, Rebuttal, Paper Writing]
-version: 0.1.0
+metadata:
+  tags: [Research, Academic, Rebuttal, Paper Writing]
+  version: "0.1.0"
 ---
 
 # Review Response
@@ -86,7 +87,7 @@ When the rebuttal task involves:
 
 read this file before drafting:
 
-- `~/.claude/skills/ml-paper-writing/references/knowledge/paper-miner-writing-memory.md`
+- `${CLAUDE_SKILL_DIR}/../ml-paper-writing/references/knowledge/paper-miner-writing-memory.md`
 
 ### Default read order for rebuttal work
 
